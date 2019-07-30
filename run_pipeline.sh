@@ -63,8 +63,8 @@ function run
 
   # docker_image=openms240
   # docker_version=latest
-  docker_image=openms
-  docker_version=nightly_thermo
+  docker_image=austinu17/proteomic_workflow
+  docker_version=run_1
   data=${PWD}
 
   echo "Starting up OpenMS Docker"
