@@ -1,0 +1,120 @@
+raw:
+    location: "raw"
+
+mzml:
+    location: "raw"
+
+fasta:
+    location: "fasta"
+
+database:
+    decoy_string: "DECOY_"
+    decoy_string_position: "prefix"
+    method: "reverse"
+    seed: '1'
+    missing_decoy_action: "warn"
+
+search_engines:
+    - "msgfplus"
+    - "xtandem"
+    - "comet"
+    #- "myrimatch"
+
+msgfplus:
+    inst: 'Q_Exactive' # 'low_res', 'high_res', 'TOF', 'Q_Exactive')
+
+lc:
+    peak_width: '120'
+
+precursor:
+    tolerance: '20'
+    units: 'ppm'
+    threshold: '100'
+
+fragment:
+    tolerance: '0.02'
+    units: 'Da'
+
+digestion:
+    enzyme: "Trypsin/P"
+    missed_cleavages: "1"
+    tryptic: "full"
+
+modifications:
+    fixed: 
+        # Common
+        - "Carbamidomethyl (C)"
+        
+    variable: 
+        # Common
+        # - "Carbamidomethyl (C)"
+        # s- "Oxidation (M)"
+
+        # Monooxidation
+        # - "Oxidation (C)"
+        # - "Oxidation (C-term G)"
+        # - "Oxidation (D)"
+        # - "Oxidation (F)"
+        # - "Oxidation (H)"
+        # - "Oxidation (K)"
+        # - "Oxidation (N)"
+        # - "Oxidation (P)"
+        # - "Oxidation (R)"
+        # - "Oxidation (U)"
+        # - "Oxidation (W)"
+        # - "Oxidation (Y)"
+
+        # Dioxidations
+        # - "Dioxidation (C)"
+        # - "Dioxidation (F)"
+        # - "Dioxidation (K)"
+        # - "Dioxidation (M)"
+        # - "Dioxidation (P)"
+        # - "Dioxidation (R)"
+        # - "Dioxidation (U)"
+        # - "Dioxidation (W)"
+        # - "Dioxidation (Y)"
+
+        # Trioxidation
+        # - "Trioxidation (C)"
+        # - "Trioxidation (W)"
+        # - "Trioxidation (Y)"
+
+        # Deamidation
+        # - "Deamidated (N)"
+        # - "Deamidated (Protein N-term F)"
+        # - "Deamidated (Q)"
+        # - "Deamidated (R)"
+
+        # APEX2
+        # - "Biotin (K)"
+        # - "Biotin-tyramide (Y)"
+
+        # Peptide Mapping 
+        # - "Ammonia-loss (N)"
+        # - "Dehydrated (D)"
+        # - "Dehydrated (S)"
+        # - "Dehydrated (T)"
+        # - "Dehydrated (Y)"
+        # - "Carbamyl (C)"
+        # - "Carbamyl (K)"
+        # - "Carbamyl (M)"
+        # - "Carbamyl (Protein N-term)"
+        # - "Carbamyl (R)"
+        # - "Carbamyl (S)"
+        # - "Carbamyl (T)"
+        # - "Carbamyl (Y)"
+        # - "Gln->pyro-Glu (N-term Q)"
+        # - "Dioxidation (Y)"
+        # - "Lys-loss (Protein C-term K)"
+
+protein:
+    fdr: "0.05"
+
+peptide:
+    fdr: "0.05"
+
+singularity:
+    default: "shub://mafreitas/singularity-openms:latest"
+
+debug: "0"

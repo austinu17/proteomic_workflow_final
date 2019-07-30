@@ -1,0 +1,11 @@
+**benchmarks.txt
+.snakemake/
+.DS_Store
+mzml/
+work/
+csv/
+mztab/
+raw/
+**.ipynb
+fasta/
+benchmarks.txt

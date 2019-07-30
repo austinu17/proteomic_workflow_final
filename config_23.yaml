@@ -1,0 +1,55 @@
+raw:
+    location: "raw"
+
+mzml:
+    location: "mzml"
+
+fasta:
+    location: "fasta"
+
+database:
+    decoy_string: "DECOY_"
+    decoy_string_position: "prefix"
+    missing_decoy_action: "warn"
+
+search_engines:
+    - "msgfplus"
+   # - "xtandem"
+   # - "comet"
+   # - "myrimatch"
+
+msgfplus:
+    inst: 'TOF' # 'low_res', 'high_res', 'TOF', 'Q_Exactive')
+
+lc:
+    peak_width: '120'
+
+precursor:
+    tolerance: '50'
+    units: 'ppm'
+    threshold: '100'
+
+fragment:
+    tolerance: '0.05'
+    units: 'Da'
+
+digestion:
+    enzyme: "Trypsin/P"
+    missed_cleavages: "1"
+    tryptic: "full"
+
+modifications:
+    #fixed: "\"Carbamidomethyl (C)\""
+    fixed: ""   
+    variable: ""
+
+protein:
+    fdr: "0.05"
+
+peptide:
+    fdr: "0.05"
+
+singularity:
+    default: "shub://mafreitas/singularity-openms:latest"
+
+debug: "0"
